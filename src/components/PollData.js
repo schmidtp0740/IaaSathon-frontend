@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import * as d3 from 'd3-shape';
 
 class PollData extends Component{
     constructor(props){
@@ -34,11 +35,14 @@ class PollData extends Component{
     }
 
     render(){
-        const cat = this.state.cat;
+        const data = {
+            cat: this.state.cat,
+            dog: this.state.dog
+        }
         return(
             <div>
-                <h1>Cat : {cat}</h1>
-                <h1>Dog: {this.state.dog}</h1>
+                <h1>Cat: {data.cat}</h1>
+                <h1>Dog: {data.dog}</h1>
             </div>
         )
     }
