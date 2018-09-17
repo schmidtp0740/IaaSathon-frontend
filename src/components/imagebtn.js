@@ -9,11 +9,15 @@ class ImageBTN extends Component{
 
     }
 
-    determineCatorDog(props){
-        if (props.name === "dog"){
-            return "./images/dog.png"
-        } else if (props.name === "cat"){
-            return "./images/cat.svg"
+    determineFramework(props){
+        if (props.name === "angular"){
+            return "./images/angular.png"
+        } else if (props.name === "ember"){
+            return "./images/ember.png"
+        } else if (props.name === "react"){
+            return "./images/react.png"
+        } else if (props.name === "vue"){
+            return "./images/vue.png"
         }
     }
     
@@ -37,7 +41,7 @@ class ImageBTN extends Component{
     
     render(){
         return(                         
-            <img onClick={this.sendVote} src={this.determineCatorDog(this.props)} alt="cat or dog"/>
+            <img onClick={this.sendVote} src={this.determineFramework(this.props)} alt="angular, ember, react, or vue"/>
         )
 
     }
