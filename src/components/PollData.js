@@ -6,8 +6,10 @@ class PollData extends Component{
         super(props);
         this.getVotes = this.getVotes.bind(this)
         this.state = {
-            cat: 0,
-            dog: 0
+            angular: 0,
+            react: 0,
+            ember: 0,
+            vue: 0
         };
 
     }
@@ -18,8 +20,10 @@ class PollData extends Component{
         axios.get(url, {})
             .then((resp) =>{
                 this.setState({
-                    cat: resp.data.cat,
-                    dog: resp.data.dog
+                    angular: resp.data.angular,
+                    react: resp.data.react,
+                    ember: resp.data.ember,
+                    vue: resp.data.vue
                 });
             })
             .catch((err) => {
@@ -35,13 +39,17 @@ class PollData extends Component{
 
     render(){
         const data = {
-            cat: this.state.cat,
-            dog: this.state.dog
+            angular: this.state.angular,
+            react: this.state.react,
+            ember: this.state.ember,
+            vue: this.state.vue
         }
         return(
             <div>
-                <h1>Cat: {data.cat}</h1>
-                <h1>Dog: {data.dog}</h1>
+                <h1>Angular: {data.angular}</h1>
+                <h1>React: {data.react}</h1>
+                <h1>Ember: {data.ember}</h1>
+                <h1>Vue: {data.vue}</h1>
             </div>
         )
     }

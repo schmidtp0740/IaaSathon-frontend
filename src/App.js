@@ -10,10 +10,16 @@ import './App.css';
       <div>
         <Row className="ButtowRow" type="flex" justify="space-around" align="middle" >
           <Col span={12} >
-            <ImageBTN name="dog"/>
+            <ImageBTN name="angular"/>
           </Col>
           <Col span={12}>
-            <ImageBTN name="cat"/>
+            <ImageBTN name="ember"/>
+          </Col>
+          <Col span={12}>
+            <ImageBTN name="react"/>
+          </Col>
+          <Col span={12}>
+            <ImageBTN name="vue"/>
           </Col>
         </Row>
         <PollData/>
